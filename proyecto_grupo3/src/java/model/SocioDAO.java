@@ -40,10 +40,8 @@ public class SocioDAO {
     public int agregar(Socio s){
         int r=0;
         int t=0;
-        String sql="INSERT INTO socio(codigo_socio,cedula_socio,usuario_socio,nombre_socio,apellido_socio, telefono_socio"
-                              + "values(?,?,?,?,?,?)";
-        
-        String sql2 = "INSERT INTO USUARIO (codigo_usuario,codigo_socio,clave) VALUES (null,'"+s.getId()+"','"+s.getPass()+"')";
+        String sql="INSERT INTO socio (codigo_socio,cedula_socio,usuario_socio,nombre_socio,apellido_socio, telefono_socio) values ("+s.getId()+",'"+s.getCedula()+"','"+s.getUsuario()+"','"+s.getNombre()+"','"+s.getApellido()+"','"+s.getTelefono()+"')";
+        String sql2="INSERT INTO USUARIO (codigo_usuario,codigo_socio,clave) VALUES (null,'"+s.getId()+"','"+s.getPass()+"')";
         try{
             con=c.conectar();
             ps=con.prepareStatement(sql);
@@ -67,8 +65,8 @@ public class SocioDAO {
         return r;
     }
     
-    public Socio listarPer(String id){
-        String sql="SELECT * FROM SOCIO where codigo_socio="+id;
+    public Socio listarSocio(String id){
+        String sql="SELECT s.*,u.clave FROM socio s, usuario u WHERE s.codigo_socio=u.codigo_socio  AND s.codigo_socio="+id;
         Socio s=new Socio();
         try{
             con=c.conectar();
@@ -81,6 +79,7 @@ public class SocioDAO {
                 s.setNombre(rs.getString(4));
                 s.setApellido(rs.getString(5));
                 s.setTelefono(rs.getString(6));
+                s.setPass(rs.getString(7));
             }
         }catch(SQLException e){
             
@@ -90,8 +89,7 @@ public class SocioDAO {
     
     public int Actualizar(Socio s){
         int r=0;
-        String sql="UPDATE socio SET cedula_socio=?,usuario_socio=?,nombre_socio=?"
-                + ",apellido_socio=?, telefono_socio=? WHERE codigo_socio=?";
+        String sql="UPDATE socio SET cedula_socio='"+s.getCedula()+"',usuario_socio='"+s.getUsuario()+"',nombre_socio='"+s.getNombre()+"',apellido_socio='"+s.getApellido()+"', telefono_socio='"+s.getTelefono()+"' WHERE codigo_socio="+s.getId();
         try{
             con=c.conectar();
             ps.setString(1, s.getCedula());

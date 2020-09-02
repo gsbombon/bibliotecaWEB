@@ -15,7 +15,7 @@ import model.SocioDAO;
 public class SociosController extends HttpServlet {
 
     SocioDAO dao=new SocioDAO();
-    Socio s=new Socio();
+    Socio s =new Socio();
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -52,12 +52,12 @@ public class SociosController extends HttpServlet {
         String accion = request.getParameter("accion");
         switch (accion) {
             case "Nuevo":
-                request.getRequestDispatcher("/Socio/agregar.jsp").forward(request, response);
+                request.getRequestDispatcher("agregar.jsp").forward(request, response);
                 break;
             case "Listar":
                 List<Socio> datos = dao.listar();
                 request.setAttribute("datos", datos);
-                request.getRequestDispatcher("/Socio/Socio.jsp").forward(request, response);
+                request.getRequestDispatcher("Socio.jsp").forward(request, response);
                 break;
             case "Inicio":
                 request.getRequestDispatcher("Socio.jsp").forward(request, response);
@@ -65,7 +65,7 @@ public class SociosController extends HttpServlet {
             case "Eliminar":
                 String idE = request.getParameter("id");
                 dao.delete(idE);
-                request.getRequestDispatcher("Controlador?accion=Listar").forward(request, response);
+                request.getRequestDispatcher("SocioController?accion=Listar").forward(request, response);
                 break;
             case "Guardar":
                 String id = request.getParameter("txtId");
@@ -83,7 +83,31 @@ public class SociosController extends HttpServlet {
                 s.setUsuario(usuario);
                 s.setPass(pass);
                 dao.agregar(s);
-                request.getRequestDispatcher("/Socio/Socio.jsp").forward(request, response);
+                request.getRequestDispatcher("index.jsp").forward(request, response);
+                break;
+            case "Editar":
+                String idP = request.getParameter("id");
+                Socio soc = dao.listarSocio(idP);
+                request.setAttribute("socio", soc);
+                request.getRequestDispatcher("editar.jsp").forward(request, response);
+                break;
+            case "Actualizar":
+                String idN = request.getParameter("txtId");
+                String cedulaN = request.getParameter("txtCedula");
+                String nombreN = request.getParameter("txtNombre");
+                String apellidoN = request.getParameter("txtApellido");
+                String telefonoN = request.getParameter("txtTelefono");
+                String usuarioN = request.getParameter("txtUsuario");
+                String passN = request.getParameter("txtPass");
+                s.setId(idN);
+                s.setCedula(cedulaN);
+                s.setNombre(nombreN);
+                s.setApellido(apellidoN);
+                s.setTelefono(telefonoN);
+                s.setUsuario(usuarioN);
+                s.setPass(passN);
+                dao.Actualizar(s);
+                request.getRequestDispatcher("Socio.jsp").forward(request, response);
                 break;
             default:
                 throw new AssertionError();

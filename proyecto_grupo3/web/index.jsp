@@ -13,7 +13,7 @@
         <nav class="navbar navbar-dark bg-dark">
             <a style="color: white;" href="#" class="navbar-toggler" > <span class="navbar-toggler-icon" ></span> Home</a>
             <%if (session.getAttribute("socio") != null && "ADM".equals(session.getAttribute("socio".toString())) ){ %>
-            <a style="color: white;" class="nav-link" href="Socio/Socio.jsp">Socio</a>
+            <a style="color: white;" class="nav-link" href="Socio.jsp">Socio</a>
             <a style="color: white;" class="nav-link" href="view/Prestamos.jsp">Prestamos</a>
             <%}%>
             <%if (session.getAttribute("socio") != null ) { %>
