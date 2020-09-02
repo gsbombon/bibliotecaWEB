@@ -22,6 +22,7 @@
                     <form action="SociosController" method="POST">
                         <input type="submit" name="accion" value="Listar" class="btn btn-primary">
                     </form>
+                    <br>
                     <a href="agregar.jsp" class="btn btn-success">NUEVO REGISTRO</a>
                 </div>
                 <div>
@@ -34,7 +35,7 @@
                                 <th>Nombre</th>
                                 <th>Apellido</th>
                                 <th>Telefono</th>
-                                <th>Contraseña</th>
+                                <!--<th>Contraseña</th> -->
                                 <th>Acciones</th>
                             </tr>
                         </thead>
@@ -47,10 +48,11 @@
                                     <td>${dato.getNombre()}</td>
                                     <td>${dato.getApellido()}</td>
                                     <td>${dato.getTelefono()}</td>
-                                    <td>${dato.getPass()}</td>
+                                    <!-- <td>${dato.getPass()}</td> -->
                                     <td>
                                         <form action="SociosController" method="POST">
                                             <input type="hidden" name="id" value="${dato.getId()}">
+                                            <input class="btn btn-info" type="submit" name="accion" value="Detalles">
                                             <input class="btn btn-success" type="submit" name="accion" value="Editar">
                                             <input class="btn btn-danger" type="submit" name="accion" value="Eliminar">
                                         </form>

@@ -26,8 +26,10 @@
                     <input class="form-control" type="text" name="txtTelefono" placeholder="Ingrese Telefono* " value="${socio.getTelefono()}"><br>
                     <label class="control-label h5" >USUARIO: </label> 
                     <input class="form-control" type="text" name="txtUsuario" placeholder="Ingrese Usuario* " value="${socio.getUsuario()}"><br>
+                    <!--
                     <label class="control-label h5" >CONTRASEÑA: </label> 
-                    <input class="form-control" type="password" name="txtPass" placeholder="Ingrese Contraseña* "value="${socio.getPass()}" ><br>
+                    <input class="form-control" type="password" name="txtPass" placeholder="Ingrese Contraseña* "value="{socio.getPass()}" ><br>
+                    -->
                     <br>
                     <input class="btn btn-success p-3 pr-5 pl-5" type="submit" name="accion" value="Actualizar"><br>
                 </form>
