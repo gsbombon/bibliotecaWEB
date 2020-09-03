@@ -9,22 +9,46 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     </head>
-    <body>
+    <body style="background-image: url('img/bg-libraryblanco.jpg');" >
         <nav class="navbar navbar-dark bg-dark">
+            
             <a style="color: white;" href="#" class="navbar-toggler" > <span class="navbar-toggler-icon" ></span> Home</a>
             <%if (session.getAttribute("socio") != null && "ADM".equals(session.getAttribute("socio".toString())) ){ %>
-                <a style="color: white;" class="nav-link" href="Socio.jsp">Socio</a>
-                <a style="color: white;" class="nav-link" href="view/Prestamos.jsp">Prestamos</a>
-                <a style="color: white;" class="nav-link" href="view/Libros.jsp">Libros</a>
+            
+            <!--REPORTES-->
+            <div class="dropdown">
+            <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                REPORTES
+            </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="Reportes/Report_1.jsp">Reporte 1</a>
+                    <a class="dropdown-item" href="Reportes/Report_2.jsp">Reporte 2</a>
+                    <a class="dropdown-item" href="Reportes/Report_3.jsp">Reporte 3</a>
+                    <a class="dropdown-item" href="Reportes/Report_4.jsp">Reporte 4</a>
+                </div>
+            </div>
+            <!--REPORTES-->
+            
+            <a class="nav-link btn btn-dark" href="Socio.jsp">Usuarios</a>
+            <form action="LibroController" method="post">
+                <input class="nav-link btn btn-dark" type="submit" name="accion" value="Listar Libros">
+            </form>
             <%}%>
             
+            <!--SOCIO-->
             <%if (session.getAttribute("socio") != null ) { %>
                 <%if (!"ADM".equals(session.getAttribute("socio".toString())) ) { %>
-                <a style="color: white;" class="nav-link" href="view/Libros.jsp">Libros</a>
-                <a style="color: white;" class="nav-link" href="view/Reportes.jsp">Reportes</a>
+                
+                <form action="LibroController" method="post">
+                    <input class="nav-link btn btn-dark" type="submit" name="accion" value="Libros">
+                </form>
+                
+                <form action="PrestamoController" method="post">
+                    <input class="nav-link btn btn-dark" type="submit" name="accion" value="Prestamos">
+                </form>
+
                 <%}%>
             <%}%>
-            
             <div class="dropdown">
                 <%if (session.getAttribute("socio") != null) { %>
                 <a style="color: white;" href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" >Cerrar Sesion</a>
@@ -51,17 +75,24 @@
         
         <div class="container mt-4">
             <%if(session.getAttribute("socio")!= null){ %>
-                <h1> Bienvenido al sistema <strong>${socio}</strong> </h1>
+            
+            <div class="container text-center mt-5 pt-5">
+                <h1 class="display-1 mt-5"> BIENVENIDO AL SISTEMA  </h1>
+                <h1 class="display-1 mt-5"> BIBLIOTECA WEB  </h1>
+                <h1 class="display-2 mt-5"> <strong>${socio}</strong>  </h1>
+            </div>
+                
             <%}else{%>
-            <div class="container">
-                <h1 class=" text-center">Proyecto Integrador</h1>
-                <h2>Integrantes: </h2>
-                <h3>* Gerson Steven Bombon Toca</h3>
-                <h3>* Jairo Vizuete</h3>
-                <h3>* Daniel Yandun</h3>
+            
+            <div class="container text-center mt-5 pt-5">
+                <h1 class="display-1 mt-5"> <strong> PROYECTO INTEGRADOR </strong>  </h1>
+                <h1 class="display-3 mt-5 "> BOMBON STEVEN   </h1>
+                <h1 class="display-3 mt-5 "> VIZUETE JAIRO  </h1>
+                <h1 class="display-3 mt-5 "> YANDUN DANIEL   </h1>
             </div>
             <%}%>
         </div>
     </body>
 </html>
+
 

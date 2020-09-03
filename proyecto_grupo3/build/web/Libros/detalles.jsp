@@ -1,3 +1,9 @@
+<%-- 
+    Document   : detalles
+    Created on : 03-sep-2020, 15:43:00
+    Author     : PochoHP
+--%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
