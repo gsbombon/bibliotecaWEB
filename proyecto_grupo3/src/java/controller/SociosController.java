@@ -68,20 +68,19 @@ public class SociosController extends HttpServlet {
                 request.getRequestDispatcher("SociosController?accion=Listar").forward(request, response);
                 break;
             case "Guardar":
-                String id = request.getParameter("txtId");
                 String cedula = request.getParameter("txtCedula");
                 String nombre = request.getParameter("txtNombre");
                 String apellido = request.getParameter("txtApellido");
                 String telefono = request.getParameter("txtTelefono");
                 String usuario = request.getParameter("txtUsuario");
-                //String pass = request.getParameter("txtPass");
-                s.setId(id);
+                String pass = request.getParameter("txtPass");
+                
                 s.setCedula(cedula);
                 s.setNombre(nombre);
                 s.setApellido(apellido);
                 s.setTelefono(telefono);
                 s.setUsuario(usuario);
-                //s.setPass(pass);
+                s.setPass(pass);
                 dao.agregar(s);
                 request.getRequestDispatcher("index.jsp").forward(request, response);
                 break;
@@ -98,14 +97,12 @@ public class SociosController extends HttpServlet {
                 String apellidoN = request.getParameter("txtApellido");
                 String telefonoN = request.getParameter("txtTelefono");
                 String usuarioN = request.getParameter("txtUsuario");
-                //String passN = request.getParameter("txtPass");
-                s.setId(idN);
+                s.setId(Integer.parseInt(idN));
                 s.setCedula(cedulaN);
                 s.setNombre(nombreN);
                 s.setApellido(apellidoN);
                 s.setTelefono(telefonoN);
                 s.setUsuario(usuarioN);
-                //s.setPass(passN);
                 dao.Actualizar(s);
                 request.getRequestDispatcher("Socio.jsp").forward(request, response);
                 break;

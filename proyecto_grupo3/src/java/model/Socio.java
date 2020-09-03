@@ -1,7 +1,7 @@
 package model;
 
 public class Socio {
-    String id;
+    int id;
     String cedula;
     String usuario;
     String nombre;
@@ -11,7 +11,7 @@ public class Socio {
     public Socio() {
     }
 
-    public Socio(String id, String cedula, String usuario, String nombre, String apellido, String telefono,String pass) {
+    public Socio(int id, String cedula, String usuario, String nombre, String apellido, String telefono,String pass) {
         this.id = id;
         this.cedula = cedula;
         this.usuario = usuario;
@@ -29,13 +29,14 @@ public class Socio {
         this.pass = pass;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
+
 
     public String getCedula() {
         return cedula;

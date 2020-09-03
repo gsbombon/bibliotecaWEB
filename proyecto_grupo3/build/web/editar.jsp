@@ -9,13 +9,12 @@
     <body >
         <center>
         <div class="w-100 p-3 bg-dark">
-            <h2 class="text-white text-center ">EDITAR SOCIO</h2>
+            <h2 class="text-white text-center ">EDITAR SOCIO</h2>   
         </div>
         <div class="container m-5">
             <div class="p-5 border border-info rounded shadow p-3 mb-5 bg-white">
                 <form action="SociosController" method="POST">
-                    <label class="control-label h5" >ID: </label> 
-                    <input class="form-control" type="number" name="txtId" placeholder="ingrese ID* " value="${socio.getId()}" disabled><br>
+                    <input class="form-control" name="txtId" placeholder="ingrese ID* " value="${socio.getId()}" type="hidden"><br>
                     <label class="control-label h5" >CEDULA: </label> 
                     <input class="form-control" type="text" name="txtCedula" placeholder="Ingrese Cedula* " value="${socio.getCedula()}"><br>
                     <label class="control-label h5" >NOMBRE: </label> 
@@ -26,10 +25,6 @@
                     <input class="form-control" type="text" name="txtTelefono" placeholder="Ingrese Telefono* " value="${socio.getTelefono()}"><br>
                     <label class="control-label h5" >USUARIO: </label> 
                     <input class="form-control" type="text" name="txtUsuario" placeholder="Ingrese Usuario* " value="${socio.getUsuario()}"><br>
-                    <!--
-                    <label class="control-label h5" >CONTRASEÑA: </label> 
-                    <input class="form-control" type="password" name="txtPass" placeholder="Ingrese Contraseña* "value="{socio.getPass()}" ><br>
-                    -->
                     <br>
                     <input class="btn btn-success p-3 pr-5 pl-5" type="submit" name="accion" value="Actualizar"><br>
                 </form>

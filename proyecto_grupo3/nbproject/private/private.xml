@@ -3,15 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/LABORATORIOS%20JAVA%20WEB/PROYECTO%20INTEGRADOR/proyecto_grupo3/web/Socio.jsp</file>
-            <file>file:/C:/LABORATORIOS%20JAVA%20WEB/PROYECTO%20INTEGRADOR/proyecto_grupo3/web/editar.jsp</file>
-            <file>file:/C:/LABORATORIOS%20JAVA%20WEB/PROYECTO%20INTEGRADOR/proyecto_grupo3/web/index.jsp</file>
-            <file>file:/C:/LABORATORIOS%20JAVA%20WEB/PROYECTO%20INTEGRADOR/proyecto_grupo3/web/agregar.jsp</file>
-            <file>file:/C:/LABORATORIOS%20JAVA%20WEB/PROYECTO%20INTEGRADOR/proyecto_grupo3/src/java/controller/SociosController.java</file>
-            <file>file:/C:/LABORATORIOS%20JAVA%20WEB/PROYECTO%20INTEGRADOR/proyecto_grupo3/src/java/controller/Ingresar.java</file>
-            <file>file:/C:/LABORATORIOS%20JAVA%20WEB/PROYECTO%20INTEGRADOR/proyecto_grupo3/src/java/model/SocioDAO.java</file>
-            <file>file:/C:/LABORATORIOS%20JAVA%20WEB/PROYECTO%20INTEGRADOR/proyecto_grupo3/web/login.jsp</file>
-            <file>file:/C:/LABORATORIOS%20JAVA%20WEB/PROYECTO%20INTEGRADOR/proyecto_grupo3/web/detalles.jsp</file>
+            <file>file:/C:/LABORATORIOS%20JAVA%20WEB/PROYECTO%20INTEGRADOR/GIT%20HUB/bibliotecaWEB/proyecto_grupo3/src/java/model/Conexion.java</file>
+            <file>file:/C:/LABORATORIOS%20JAVA%20WEB/PROYECTO%20INTEGRADOR/GIT%20HUB/bibliotecaWEB/proyecto_grupo3/web/login.jsp</file>
+            <file>file:/C:/LABORATORIOS%20JAVA%20WEB/PROYECTO%20INTEGRADOR/GIT%20HUB/bibliotecaWEB/proyecto_grupo3/web/index.jsp</file>
+            <file>file:/C:/LABORATORIOS%20JAVA%20WEB/PROYECTO%20INTEGRADOR/GIT%20HUB/bibliotecaWEB/proyecto_grupo3/src/java/model/Validar.java</file>
+            <file>file:/C:/LABORATORIOS%20JAVA%20WEB/PROYECTO%20INTEGRADOR/GIT%20HUB/bibliotecaWEB/proyecto_grupo3/web/Socio.jsp</file>
+            <file>file:/C:/LABORATORIOS%20JAVA%20WEB/PROYECTO%20INTEGRADOR/GIT%20HUB/bibliotecaWEB/proyecto_grupo3/web/detalles.jsp</file>
+            <file>file:/C:/LABORATORIOS%20JAVA%20WEB/PROYECTO%20INTEGRADOR/GIT%20HUB/bibliotecaWEB/proyecto_grupo3/web/editar.jsp</file>
+            <file>file:/C:/LABORATORIOS%20JAVA%20WEB/PROYECTO%20INTEGRADOR/GIT%20HUB/bibliotecaWEB/proyecto_grupo3/src/java/model/SocioDAO.java</file>
+            <file>file:/C:/LABORATORIOS%20JAVA%20WEB/PROYECTO%20INTEGRADOR/GIT%20HUB/bibliotecaWEB/proyecto_grupo3/src/java/controller/SociosController.java</file>
+            <file>file:/C:/LABORATORIOS%20JAVA%20WEB/PROYECTO%20INTEGRADOR/GIT%20HUB/bibliotecaWEB/proyecto_grupo3/web/agregar.jsp</file>
         </group>
     </open-files>
 </project-private>

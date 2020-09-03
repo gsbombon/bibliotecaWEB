@@ -15,7 +15,7 @@
             <div class="p-5 border border-info rounded shadow p-3 mb-5 bg-white">
                 <form action="SociosController" method="POST">
                     <label class="control-label h5" >ID: </label> 
-                    <input class="form-control" type="number" name="txtId" placeholder="ingrese ID* "><br>
+                    <input class="form-control" type="number" name="txtId" placeholder="Se asigna por defecto " disabled ><br>
                     <label class="control-label h5" >CEDULA: </label> 
                     <input class="form-control" type="text" name="txtCedula" placeholder="Ingrese Cedula* "><br>
                     <label class="control-label h5" >NOMBRE: </label> 

@@ -12,7 +12,9 @@ public class UsuarioDAO implements Validar {
     Connection con;
     @Override
         public int validar(String socio,String pass) {
-        String sql="SELECT s.usuario_socio as SOCIO, u.clave as CLAVE FROM SOCIO s ,USUARIO u WHERE s.codigo_socio = u.codigo_socio AND s.usuario_socio='"+socio+"' AND u.clave='"+pass+"'";
+        String sql="SELECT s.usuario_socio as SOCIO, u.clave as CLAVE "
+                + "FROM SOCIO s ,USUARIO u WHERE s.codigo_socio = u.codigo_socio "
+                + "AND s.usuario_socio='"+socio+"' AND u.clave='"+pass+"'";
         int r=0;
         try{
             con =cn.conectar();
